@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.LoginActivity">
+
+    <LinearLayout
+        android:id="@+id/linear_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main_red"
+        android:orientation="horizontal"
+        android:paddingTop="8dp"
+        android:paddingStart="16dp">
+
+        <TextView
+            android:id="@+id/text_view_health"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="3"
+            android:fontFamily="@font/aclonica"
+            android:gravity="start"
+            android:text="HEALTH\nCALC"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:typeface="normal" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_weight="1"
+            android:src="@drawable/bmi" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/img_wave_up"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/ic_wave_top"
+        android:layout_below="@id/linear_top"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/img_wave_up"
+        android:layout_above="@id/img_wave_down"
+        android:orientation="vertical"
+        android:padding="32dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:layout_marginLeft="25dp"
+            android:gravity="left"
+            android:fontFamily="sans-serif-black"
+            android:textColor="@color/black"
+            android:textSize="25sp"/>
+
+        <TextView
+            android:id="@+id/text_view_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Faça login para continuar"
+            android:layout_marginLeft="25dp"
+            android:gravity="left"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/black"
+            android:textSize="15sp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:id="@+id/input_layout_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_below="@+id/text_view_login"
+            android:hint="E-mail">
+
+            <EditText
+                android:id="@+id/edit_login_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_baseline_email_24"
+                android:drawablePadding="15dp"
+                android:layout_marginTop="10dp"
+                android:maxLines="1"
+                android:padding="15dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:id="@+id/input_layout_senha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/input_layout_email"
+            android:hint="Senha">
+
+            <EditText
+                android:id="@+id/edit_login_senha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_baseline_lock_24"
+                android:drawablePadding="15dp"
+                android:maxLines="1"
+                android:padding="15dp"
+                android:inputType="numberPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/button_entrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/input_layout_senha"
+            android:background="@drawable/activity_entrar"
+            android:layout_marginTop="16dp"
+            android:padding="8dp"
+            android:text="ENTRAR"
+            android:textColor="@color/white"/>
+
+        <CheckBox
+            android:id="@+id/checkbox_lembrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lembrar-me"
+            android:layout_below="@+id/button_entrar"
+            android:layout_marginTop="10dp"
+            android:layout_alignRight="@+id/button_entrar"
+            android:layout_gravity="end"/>
+
+        <TextView
+            android:id="@+id/text_view_esqueci"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/checkbox_lembrar"
+            android:text="Esqueci a senha"
+            android:layout_alignRight="@id/checkbox_lembrar"
+            android:textColor="@color/blue"
+            android:textSize="15sp"
+            android:layout_gravity="end"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_view_esqueci"
+                android:layout_alignRight="@id/text_view_esqueci"
+                android:text="Não tem uma conta?"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/tv_nova_conta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_view_esqueci"
+                android:layout_alignRight="@id/text_view_esqueci"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="8dp"
+                android:text="Criar uma conta agora"
+                android:textColor="@color/blue"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/img_wave_down"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/ic_wave_botton"
+        android:layout_alignParentBottom="true"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Desenvolvido por Fernanda"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:fontFamily="sans-serif-black"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:layout_marginBottom="5dp"/>
+
+
+
+
+
+</RelativeLayout>
